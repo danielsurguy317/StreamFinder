@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreamFinder</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+  <main class="max-w-5xl mx-auto px-6 py-12">
+    <h1 id="mainTitle" class="text-4xl font-bold text-center">
+      StreamFinder
+    </h1>
+
+    <p id="message" class="text-slate-400 text-center mt-3">
+      Find your next TV show.
+    </p>
+
+    <!-- Search bar -->
+    <div class="flex gap-2 max-w-xl mx-auto mt-8">
+      <input
+        id="searchInput"
+        type="text"
+        placeholder="Search for a show..."
+        class="flex-1 bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 outline-none focus:border-blue-500"
+      >
+
+      <button
+        id="searchBtn"
+        type="button"
+        class="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-lg font-semibold"
+      >
+        Search
+      </button>
+
+
+      <button id="randomBtn"
+        class="bg-purple-600 hover:bg-purple-500 px-5 py-3 rounded-lg font-semibold">
+        Random Pick
+        </button>
+    </div>
+
+    <!--Genre dropdown-->
+    <div class="max-w-xl mx-auto mt-4">
+    <select
+        id="genreFilter"
+        class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 outline-none focus:border-blue-500"
+    >
+        <option value="All">All genres</option>
+        <option value="Action">Action</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Drama">Drama</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Science-Fiction">Science-Fiction</option>
+        <option value="Thriller">Thriller</option>
+        <option value="Romance">Romance</option>
+        <option value="Anime">Anime</option>
+    </select>
+</div>
+
+    <!-- Multiple show results -->
+    <section
+      id="results"
+      class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+    </section>
+
+
+    <!-- Watchlist section -->
+<section class="mt-12">
+    <h2 class="text-2xl font-bold mb-6">
+        My Watchlist
+        (<span id="watchlistCount">0</span>)
+    </h2>
+
+    <div id="watchlistItems" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    </div>
+</section>
+  </main>
+</body>
+</html>
